@@ -1,0 +1,100 @@
+/**index.wxss**/
+.banner{
+  position: relative;
+  height: 338rpx;
+}
+.banner swiper{
+  height: 388rpx;
+  width: 100%;
+}
+.banner image{
+  height: 388rpx;
+  width: 100%;
+}
+.banner swiper-item{
+  position: relative;
+
+}
+.banner .desc{
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+  color: aliceblue;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10rpx;
+  font-size: 24rpx;
+  text-align: center;
+}
+.banner-current{
+  position: absolute;
+  right: 20rpx;
+  bottom: -40rpx;
+  color: #fff;
+  font-size: 26rpx;
+}
+.one-day{
+display: flex;
+margin-top: 75rpx;
+padding: 0 20rpx;
+justify-content: space-around;
+}
+.one-item{
+  text-align: center;
+  font-size: 28rpx;
+  color: #676565;
+}
+.one-item image{
+  height: 185rpx;
+  width: 306rpx;
+}
+.list{
+  padding: 0 20rpx;
+}
+.list .item{
+  margin-top: 20rpx;
+  position: relative;
+  border-bottom: 1rpx solid #eee;
+}
+.list .title{
+  font-size: 30rpx;
+  color: #1a1a1a;
+  margin-bottom: 18rpx;
+  overflow: hidden;             /*超出内容隐藏*/
+  text-overflow: ellipsis;      /*超出内容为省略号*/
+  display: -webkit-box;         /*内容不换行*/
+  -webkit-line-clamp: 1;        /*超出几行*/
+  -webkit-box-orient: vertical; /*从上到下垂直排列子元素*/
+  height: 100%;
+}
+.item .item-wrapper{
+  display: flex;
+}
+.list .img image{
+  width: 210rpx;
+  height: 140rpx;
+}
+.list .info{
+  padding-left: 10rpx;
+  font-size: 26rpx;
+  color: #777;
+  /* 文字三行以上显示省略号 */
+  overflow: hidden;             /*超出内容隐藏*/
+  text-overflow: ellipsis;      /*超出内容为省略号*/
+  display: -webkit-box;         /*内容不换行*/
+  -webkit-line-clamp: 3;        /*超出几行*/
+  -webkit-box-orient: vertical; /*从上到下垂直排列子元素*/
+  height: 100%;
+              /*没有效果时添加或删除改行*/
+}
+.list .page-views{
+  position: absolute;
+  right: 20rpx;
+  bottom: 10rpx;
+  font-size: 24rpx;
+  color: #4d4d4d;
+}
+.list .page-views text{
+  margin-right: 5rpx;
+  color: red;
+}

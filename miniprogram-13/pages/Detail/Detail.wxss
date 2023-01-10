@@ -1,0 +1,16 @@
+/* pages/Detail/Detail.wxss */
+.title{
+  margin: 20rpx;
+  font-size: 36rpx;
+}
+image{
+  width: 100%;
+  height: 500rpx;
+  margin-bottom: 20rpx;
+}
+.article{
+  padding: 20rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  color: #888;
+}

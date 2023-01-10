@@ -1,0 +1,42 @@
+<!--pages/food/food.wxml-->
+<view class="header">
+  <view class="location">
+    <navigator url="../selectCity/selectCity" hover-class="none">{{location}}</navigator>
+  </view>
+  <view class="search">
+    <navigator hover-class="none" url="../search/search">请输入你想要搜索的内容</navigator> 
+  </view>
+</view>
+
+<view class="product-type">
+  <view class="item" wx:for="{{productType}}" wx:key="index">
+    <image src="{{item.imgUrl}}"></image>
+    <view>{{item.name}}</view>
+  </view>
+</view>
+
+<import src="../../templates/foodList/foodList"></import>
+
+<!-- 这个接口挂了 -->
+<!-- <view wx:for="{{list}}" wx:key="index">
+  <template is='foodList' data="item"></template>
+</view> -->
+
+<view class="list">
+  <view class="list-img">
+    <image src="../../images/item-1.jpg"></image>
+  </view>
+  <view class="list-info">
+    <view class="title">title</view>
+    <view class="info">information</view>
+    <view class="info-bottom">
+      <view class="price">$45</view>
+      <view class="num">45000kaufen</view>
+    </view>
+  </view>
+</view> 
+<!-- 点击加载更多 -->
+<!-- <button bindtap="getMore" wx:if="{{isShow}}">点击加载更多</button> -->
+<!-- 下来加载更多 -->
+
+<view>{{moreInfo}}</view>

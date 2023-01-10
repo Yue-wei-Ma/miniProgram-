@@ -1,0 +1,80 @@
+<!--index.wxml-->
+<!-- 轮播图 -->
+<view class="banner">
+  <swiper autoplay="true" interval="2000" bindchange="swiperChange">
+    <swiper-item wx:for="{{banner_arr}}" wx:key="index">
+      <navigator url="{{item.url}}">
+        <image src="{{item.image}}"></image>
+        <text class="desc">{{item.title}}</text>
+      </navigator>
+    </swiper-item>
+    <!-- <swiper-item>
+      <image src="../../images/banner.jpg"></image>
+      <text class="desc">这里是信息介绍</text>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/banner.jpg"></image>
+      <text class="desc">这里是第二个信息介绍</text>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/banner.jpg"></image>
+      <text class="desc">这里是第三个信息介绍</text>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/banner.jpg"></image>
+      <text class="desc">这里是第四个信息介绍</text>
+    </swiper-item> -->
+  </swiper>  
+<!-- 轮播图下面的页码数 -->
+  <view class="banner-current">{{currentIndex+1}}/{{banner_arr.length}}</view>
+</view>
+<!-- 每日 -->
+<view class="one-day">
+  <view class="one-item">
+    <image src="../../images/info_left.jpg"></image>
+    <view>每日一测</view>
+  </view>
+  <view class="one-item">
+    <image src="../../images/info_right.jpg"></image>
+    <view>每日食谱</view>
+  </view>
+</view>
+<!-- 信息列表 -->
+<!-- <view class="list">
+  <view class="item" wx:for="{{list_arr}}" wx:key="index">
+    <navigator url="../Detail/Detail?itemId={{item.id}}">
+      <view class="title">{{item.title}}</view>
+      <view class="item-wrapper">
+        <view class="img">
+          <image src="{{item.image}}"></image>
+        </view>
+        <view class="info">{{item.desc}}</view>
+      </view>
+     <view class="page-views"><text>{{item.readNum}}</text>次阅读</view>
+    </navigator>
+  </view>
+</view> -->
+<view class="list">
+  <view class="item" wx:for="{{list_arr}}" wx:key="index" bindtap="indexDetail" data-id="{{item.id}}">
+      <view class="title">{{item.title}}</view>
+      <view class="item-wrapper">
+        <view class="img">
+          <image src="{{item.image}}"></image>
+        </view>
+        <view class="info">{{item.desc}}</view>
+      </view>
+     <view class="page-views"><text>{{item.readNum}}</text>次阅读</view>
+
+
+    <!-- <navigator url="../Detail/Detail?itemId={{item.id}}">
+      <view class="title">{{item.title}}</view>
+      <view class="item-wrapper">
+        <view class="img">
+          <image src="{{item.image}}"></image>
+        </view>
+        <view class="info">{{item.desc}}</view>
+      </view>
+     <view class="page-views"><text>{{item.readNum}}</text>次阅读</view>
+    </navigator> -->
+  </view>
+</view>
