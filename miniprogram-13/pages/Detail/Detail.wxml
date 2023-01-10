@@ -1,0 +1,5 @@
+<!--pages/Detail/Detail.wxml-->
+<view class="title">{{detail.title}}</view>
+<image src="{{detail.image}}"></image>
+<view class="article">
+{{detail.detail}}</view>

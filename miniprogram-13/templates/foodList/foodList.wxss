@@ -1,0 +1,49 @@
+.list{
+  background: #fff;
+  padding: 20rpx;
+  display: flex;
+  margin-top: 20rpx;
+}
+.list-img{
+  width: 184rpx;
+  height: 184rpx;
+}
+.list-img image{
+  width: 184rpx;
+  height: 184rpx;
+}
+.list-info {
+  position: relative;
+}
+.list-info .title{
+  padding-left: 20rpx;
+  color: #333;
+  font-size: 30rpx;
+  margin-bottom: 14rpx;
+}
+.list-info .info{
+  padding-left: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+  overflow: hidden;             /*超出内容隐藏*/
+  text-overflow: ellipsis;      /*超出内容为省略号*/
+  display: -webkit-box;         /*内容不换行*/
+  -webkit-line-clamp: 3;        /*超出几行*/
+  -webkit-box-orient: vertical; /*从上到下垂直排列子元素*/
+  height: 100%;
+}
+.list-info .info-bottom{
+  position: absolute;
+  bottom: 0rpx;
+  right: 0;
+  left: 20rpx;
+  font-size: 24rpx;
+  display: flex;
+}
+.list-info .info-bottom .price{
+  color: red;
+  margin-right: 30rpx;
+}
+.list-info .info-bottom .num{
+  color: #666;
+}
